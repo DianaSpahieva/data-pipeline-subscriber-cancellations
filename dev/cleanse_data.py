@@ -31,7 +31,10 @@ def cleanse_student_table(df):
 
     """
     now = pd.to_datetime('now')
-    df['age'] = (now - pd.to_datetime(df['dob'])).astype('<m8[Y]')
+    #df['age'] = (now - pd.to_datetime(df['dob'])).astype('<m8[Y]')
+    df["age"] = (
+    (pd.Timestamp.today() - pd.to_datetime(df["dob"])).dt.days / 365.25
+).astype(int)
     df['age_group'] = np.int64((df['age']/10))*10
 
     df['contact_info'] = df["contact_info"].apply(lambda x: ast.literal_eval(x))
