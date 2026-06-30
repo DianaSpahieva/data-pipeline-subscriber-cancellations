@@ -31,7 +31,7 @@ def cleanse_student_table(df):
 
     """
     now = pd.to_datetime('now')
-    #df['age'] = (now - pd.to_datetime(df['dob'])).astype('<m8[Y]')
+    #df['age'] = (now - pd.to_datetime(df['dob'])).astype('<m8[Y]') # old method
     df["age"] = (
     (pd.Timestamp.today() - pd.to_datetime(df["dob"])).dt.days / 365.25
 ).astype(int)
