@@ -1,6 +1,6 @@
 # Subscriber Cancellations Data Pipeline project
 
-This repository contains example code to complete the Codecademy `Subscriber Cancellations Data Pipeline` Project.
+This repository contains code to complete the Codecademy `Subscriber Cancellations Data Pipeline` Project.
 
 ## Project Description
 
